@@ -32,5 +32,18 @@ botonDesencriptar.addEventListener('click', function(e){
   mostrarMensaje.textContent = frase;
 });
 
+let copiar1 = document.querySelector('#copy1');
+copiar1.addEventListener('click', function(){
+  let copiarSpan = document.querySelector('#mensaje-encriptado');
+  navigator.clipboard.writeText(copiarSpan.textContent);
+});
+
+let copiar2 = document.querySelector('#copy2');
+copiar2.addEventListener('click', function(){
+  let copiarSpan = document.querySelector('#mensaje-desencriptado');
+  navigator.clipboard.writeText(copiarSpan.textContent);
+});
+
+
 
 
