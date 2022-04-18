@@ -2,10 +2,11 @@ let botonEncriptar = document.querySelector('#encriptar');
 
 botonEncriptar.addEventListener('click', function(e){
   e.preventDefault();
-  let frase = document.querySelector('#a-encriptar').value;
+  let frase = document.querySelector('#a-encriptar').value.toLowerCase();
   let nuevaFrase = '';
   for(let i=0; i<frase.length; i++){
-    if(frase[i] === 'e') nuevaFrase += 'enter';
+    if(/\W/.test(frase[i])) alert('No ingresar caracteres especiales! Intente nuevamente.');
+    else if(frase[i] === 'e') nuevaFrase += 'enter';
     else if(frase[i] === 'i') nuevaFrase += 'imes';
     else if(frase[i] === 'a') nuevaFrase += 'ai';
     else if(frase[i] === 'o') nuevaFrase += 'ober';
@@ -21,7 +22,7 @@ let botonDesencriptar = document.querySelector('#desencriptar');
 
 botonDesencriptar.addEventListener('click', function(e){
   e.preventDefault();
-  let frase = document.querySelector('#a-desencriptar').value;
+  let frase = document.querySelector('#a-desencriptar').value.toLowerCase();
   frase = frase.replaceAll('enter', 'e');
   frase = frase.replaceAll('imes', 'i');
   frase = frase.replaceAll('ai', 'a');
