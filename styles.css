@@ -58,6 +58,7 @@ textarea:hover{
 button:hover{
   border: 1px solid red;
   font-size: medium;
+  cursor: pointer;
 }
 
 #mensaje-encriptado, #mensaje-desencriptado{
@@ -84,6 +85,14 @@ footer p{
   background: url(bg.jpg);
   height: 100%;
   width: 100%;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+a:hover{
+  cursor:pointer;
+  font-weight: bolder;
 }
 
 @media screen and (max-width: 580px){
