@@ -5,8 +5,7 @@ botonEncriptar.addEventListener('click', function(e){
   let frase = document.querySelector('#a-encriptar').value.toLowerCase();
   let nuevaFrase = '';
   for(let i=0; i<frase.length; i++){
-    if(/\W/.test(frase[i])) alert('No ingresar caracteres especiales! Intente nuevamente.');
-    else if(frase[i] === 'e') nuevaFrase += 'enter';
+    if(frase[i] === 'e') nuevaFrase += 'enter';
     else if(frase[i] === 'i') nuevaFrase += 'imes';
     else if(frase[i] === 'a') nuevaFrase += 'ai';
     else if(frase[i] === 'o') nuevaFrase += 'ober';
